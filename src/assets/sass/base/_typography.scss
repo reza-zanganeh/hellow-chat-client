@@ -1,0 +1,58 @@
+/** @format */
+@font-face {
+  font-family: BahijHelveticaNeue;
+  font-weight: 300;
+  src: url("@/assets/fonts/Bahij-Helvetica-Neue-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: BahijHelveticaNeue;
+  font-weight: normal;
+  src: url("@/assets/fonts/Bahij-Helvetica-Neue-Roman.ttf") format("truetype");
+}
+@font-face {
+  font-family: BahijHelveticaNeue;
+  font-weight: bold;
+  src: url("@/assets/fonts/Bahij-Helvetica-Neue-Bold.ttf") format("truetype");
+}
+
+:root {
+  --phone-size: 43.75%;
+  --tab-port-size: 50%;
+  --tab-land-size: 56.25%;
+  --normal-size: 62.5%;
+}
+
+html {
+  font-size: var(--normal-size);
+  @include responsive(phone) {
+    // 7
+    font-size: var(--phone-size);
+  }
+  @include responsive(tab-port) {
+    // 8
+    font-size: var(--tab-port-size);
+  }
+  @include responsive(tab-land) {
+    //  9
+    font-size: var(--tab-land-size);
+  }
+}
+
+html,
+body {
+  font-family: "BahijHelveticaNeue", Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+}
+
+* {
+  color: var(--main-font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  font-family: inherit;
+}

@@ -1,0 +1,18 @@
+// dark
+$swatch-dark_1: #0e1621;
+$swatch-dark_2: #17212b;
+$swatch-dark_3: #242f3d;
+// light
+$swatch-light_1: #e5dfd5;
+$swatch-light_2: #2f70a5;
+
+// max-width
+$max-width: 1140px;
+$max-width-small: 750px;
+
+:root {
+  --main-font-color: #{$swatch-light_1};
+  --main-background-color: #{$swatch-dark_1};
+  --second-background-color: #{$swatch-dark_2};
+  --third-background-color: #{$swatch-dark_3};
+}
