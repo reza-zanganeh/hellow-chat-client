@@ -9,7 +9,7 @@
 <script setup>
 import RoomBox from "@/Components/Smart/Rooms/RoomBox.vue";
 import ChatBox from "@/Components/Smart/ChatBox/ChatBox.vue";
-import RightBarMenu from "@/Components/Smart/Rooms/RightBarMenu.vue";
+import RightBarMenu from "@/Components/Smart/RightBarMenu/RightBarMenu.vue";
 </script>
 
 <style scoped lang="scss">

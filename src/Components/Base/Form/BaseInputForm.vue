@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { computed, ref, toRefs } from "vue";
+import { computed, onMounted, ref, toRefs } from "vue";
 import { Field, ErrorMessage } from "vee-validate";
 const props = defineProps([
   "type",
@@ -32,7 +32,7 @@ const props = defineProps([
   "placeholder",
   "focus",
 ]);
-const { type, name } = toRefs(props);
+const { type, name, focus } = toRefs(props);
 const passwordIsVisible = ref(false);
 const togglePasswordVisibility = () => {
   passwordIsVisible.value = !passwordIsVisible.value;
@@ -43,6 +43,12 @@ const inputType = computed(() => {
 });
 const minHeightContainer = computed(() => {
   return name.value === "password" ? "9rem" : "7rem";
+});
+onMounted(() => {
+  if (focus.value) {
+    const input = document.querySelector(`input[name=${name.value}]`);
+    input.focus();
+  }
 });
 </script>
 
