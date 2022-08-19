@@ -4,6 +4,7 @@ export const useSystemStore = defineStore({
   state: () => ({
     isLoading: false,
     isButtonLoading: false,
+    rightMenuIsOpen: false,
   }),
   actions: {
     activeLoading() {
@@ -17,6 +18,12 @@ export const useSystemStore = defineStore({
     },
     disActiveButtonLoading() {
       this.isButtonLoading = false;
+    },
+    openRightMenu() {
+      this.rightMenuIsOpen = true;
+    },
+    closeRightMenu() {
+      this.rightMenuIsOpen = false;
     },
   },
 });
