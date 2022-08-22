@@ -7,7 +7,7 @@
     />
     <div class="room-info">
       <p class="room-info-name">
-        کافه بازار با اب هویچ و شیرینی و کرفس و پرتقال و سیب زمینی
+        {{ name }}
       </p>
       <p class="room-info-last-message">
         به کافه بازار خییییییییییییییییییییییییییوش امدید
@@ -18,6 +18,12 @@
     </div>
   </div>
 </template>
+
+<script setup>
+defineProps({
+  name: String,
+});
+</script>
 
 <style scoped lang="scss">
 .room {

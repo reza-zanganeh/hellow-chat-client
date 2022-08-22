@@ -29,13 +29,5 @@ import RightBarMenu from "@/Components/Smart/RightBarMenu/RightBarMenu.vue";
       min-width: unset;
     }
   }
-  ::v-deep(.chat-box) {
-    overflow-y: hidden;
-    width: 70%;
-    @include responsive(phone) {
-      // width: 100%;
-      width: 0;
-    }
-  }
 }
 </style>
